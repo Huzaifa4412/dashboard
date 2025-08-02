@@ -9,7 +9,7 @@ export default function NotAuthorized() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-background">
       <motion.div
-        className="max-w-lg p-8 bg-white rounded-lg shadow-lg"
+        className="max-w-lg p-8 bg-white dark:bg-secondary rounded-lg shadow-lg"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
@@ -41,7 +41,7 @@ export default function NotAuthorized() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link href={"/"}>
-            <Button className="px-6 py-2 text-white rounded-lg bg-primary hover:bg-secondary hover:text-primary focus:outline-none">
+            <Button className="px-6 py-2  rounded-lg bg-primary hover:bg-secondary hover:text-primary focus:outline-none">
               Go Back
             </Button>
           </Link>

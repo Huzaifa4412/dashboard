@@ -27,7 +27,7 @@ export default function ColourfulText({ text }: { text: string }) {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [colors]);
 
   return text.split("").map((char, index) => (
     <motion.span
@@ -46,7 +46,7 @@ export default function ColourfulText({ text }: { text: string }) {
         duration: 0.5,
         delay: index * 0.05,
       }}
-      className="inline-block whitespace-pre font-sans tracking-tight"
+      className="inline-block whitespace-pre uppercase tracking-tight"
     >
       {char}
     </motion.span>
