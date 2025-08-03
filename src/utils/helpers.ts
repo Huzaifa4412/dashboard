@@ -22,7 +22,8 @@ export function formatDate(timestamp: number): string {
 
 export function calculateTotalDuration(calls: any[]): string {
   const totalSeconds = calls.reduce((sum, call) => {
-    return sum + (typeof call.duration === "string" ? Number.parseInt(call.duration) : call.duration)
+    const durationMs = typeof call.duration === "string" ? Number.parseInt(call.duration) : call.duration
+    return sum + Math.floor(durationMs / 1000)
   }, 0)
 
   const hours = Math.floor(totalSeconds / 3600)
