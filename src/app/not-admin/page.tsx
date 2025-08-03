@@ -30,8 +30,8 @@ export default function NotAuthorized() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          You are not authorized to view this page. Please contact your
-          administrator.
+          You are not authorized to view this page. Please sign in with your
+          correct email.
         </motion.p>
 
         <motion.div
