@@ -330,9 +330,9 @@ export function CallLogsTable({ data }: CallLogsTableProps) {
                           <Button
                             size="sm"
                             variant="ghost"
-                            onClick={() =>
-                              window.open(call.recording, "_blank")
-                            }
+                            // onClick={() =>
+                            //   window.open(call.recording, "_blank")
+                            // }
                             className="h-8 w-8 p-0"
                           >
                             <Play className="h-4 w-4" />
