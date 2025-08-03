@@ -1,4 +1,4 @@
-import {Urbanist} from 'next/font/google';
+import { Urbanist } from 'next/font/google';
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -7,4 +7,4 @@ const urbanist = Urbanist({
   weight: ['400', '500', '700'],
 });
 
-export {urbanist};
+export { urbanist };
