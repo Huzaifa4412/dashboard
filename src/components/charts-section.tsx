@@ -111,8 +111,10 @@ export function ChartsSection({ data }: ChartsSectionProps) {
           dayDate.setDate(dayDate.getDate() - (6 - dayIndex));
           return callDate.toDateString() === dayDate.toDateString();
         })
-        .reduce((sum, call) => sum + Number.parseInt(call.duration), 0) /
-      (day.calls || 1),
+        .reduce(
+          (sum, call) => sum + Number.parseInt(call.duration) / 60000,
+          0
+        ) / (day.calls || 1),
   }));
 
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884D8"];
@@ -140,7 +142,10 @@ export function ChartsSection({ data }: ChartsSectionProps) {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="h-[300px] w-full">
+            <ChartContainer
+              config={chartConfig}
+              className="h-[300px] dark:text-white w-full "
+            >
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={barChartData}>
                   <CartesianGrid strokeDasharray="3 3" />
@@ -149,7 +154,7 @@ export function ChartsSection({ data }: ChartsSectionProps) {
                   <ChartTooltip content={<ChartTooltipContent />} />
                   <Bar
                     dataKey="count"
-                    fill="hsl(var(--chart-1))"
+                    fill="var(--primary)"
                     radius={[4, 4, 0, 0]}
                   />
                 </BarChart>
@@ -173,7 +178,7 @@ export function ChartsSection({ data }: ChartsSectionProps) {
           <CardContent>
             <ChartContainer
               config={chartConfig}
-              className="h-[300px] flex items-center justify-center! w-[300px]"
+              className="h-[300px] dark:text-white flex items-center justify-center! w-[350px]"
             >
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
@@ -214,7 +219,10 @@ export function ChartsSection({ data }: ChartsSectionProps) {
             <CardDescription>Average call duration over time</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="h-[300px] w-full">
+            <ChartContainer
+              config={chartConfig}
+              className="h-[300px] dark:text-white w-full"
+            >
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={durationTrends}>
                   <CartesianGrid strokeDasharray="3 3" />
@@ -248,7 +256,10 @@ export function ChartsSection({ data }: ChartsSectionProps) {
             <CardDescription>Calls per day over the last week</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="h-[300px] w-full">
+            <ChartContainer
+              config={chartConfig}
+              className="h-[300px] dark:text-white w-full"
+            >
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={dailyActivity}>
                   <CartesianGrid strokeDasharray="3 3" />
