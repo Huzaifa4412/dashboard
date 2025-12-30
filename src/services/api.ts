@@ -1,6 +1,6 @@
 import type { CallDataResponse, CallEntry, ProcessedCallData } from "../types/api"
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLgUnh3PITsfwVifZ5Xyhj8xR_0lfUBStLR-Gm2wyJTMeF94xtsAcyycWAA4FKdEkR7AmtUnIE3QXynTtb_Z071bMjGPXwH-_3LGvEVelICs-A7CJIvFmioSXEwC_oe8vyrRA2GasqOS-ng5NZHbe8TUvuxG-Su3mn4sUBJYzcfSuNdCF6gmJuswoVnNiVvfvYJfVGJrraVCCh4DGhjWZUbB76bgP7IIym86mjoy3dfQLxL5f2sMmpdoJSvYX8KqT4uRQ9IRTOyMjgW9fbcw2IKrXVDyIll7jJ9iAgQ5&lib=MeV5S9pyOlPbhncapkNh6FVHPcoHe_pe8"
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjb4mCBNxs6UhuHaYIl4eK3Dy3YyfTsgz8nGWCClATNBN0xx8l-1du6uap5FGTheYUOeLVarK4vQ0z6i8fP8p5kCyUpLVNZ75hWsJqtH4fsLJaobOp0RUmfpnG4jguM9yb1bVstGfSg1gonZP_hg1fvVAtTEHBHn58-yaaS4191j0_2vgnpBqh6XX5mATg6txFugIF2V1hDJMRWHvDjsXPPFvzIzAZ-u3aORV7Q3KLl9q9CZU74pUbxy6bXAd486YwFFX0_47UQJzEwOgGNd2CvEiTnEQ&lib=MvBeqelYj74JwcUTN_2isIb5Sp24iYjk_"
 
 export async function fetchCallData(): Promise<ProcessedCallData[]> {
   try {
